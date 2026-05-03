@@ -68,7 +68,7 @@ const Navbar = () => {
                 <div className="px-4 pt-4 pb-8 space-y-4">
                     <Link to="/" onClick={toggleMenu} className="block px-4 py-3 rounded-xl text-lg font-bold text-white hover:bg-white/5">Home</Link>
                     <Link to="/services" onClick={toggleMenu} className="block px-4 py-3 rounded-xl text-lg font-bold text-white hover:bg-white/5">Services</Link>
-                    <Link to="/blog" onClick={toggleMenu} className="block px-4 py-3 rounded-xl text-lg font-bold text-white hover:bg-white/5">Blog</Link>
+                    {/* <Link to="/blog" onClick={toggleMenu} className="block px-4 py-3 rounded-xl text-lg font-bold text-white hover:bg-white/5">Blog</Link> */}
                     <Link to="/about" onClick={toggleMenu} className="block px-4 py-3 rounded-xl text-lg font-bold text-white hover:bg-white/5">About</Link>
                     <div className="pt-4">
                         <Link to="/contact" onClick={toggleMenu} className="block w-full text-center bg-primary-gradient text-white py-4 rounded-xl font-bold text-lg">
