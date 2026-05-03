@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --color-background: #0F1020;
+    --color-card: #1A1C3A;
+
+    /* Logo Inspired Colors */
+    --color-magenta: #E020B1;
+    --color-blue-accent: #2066E0;
+    --color-cyan-accent: #20E0D1;
+    --color-yellow-accent: #E0D120;
+    --color-orange-accent: #FF8A00;
+
+    --color-cta: var(--color-orange-accent);
+    --color-text-primary: #FFFFFF;
+    --color-text-secondary: #B8B8D2;
+
+    --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-heading: "Poppins", sans-serif;
+
+    /* Logo Gradient: Magenta -> Blue -> Cyan -> Yellow */
+    --background-image-primary-gradient: linear-gradient(90deg, #E020B1 0%, #2066E0 33%, #20E0D1 66%, #FFD700 100%);
+
+    --radius-xl: 12px;
+}
+
+/* Custom Base Styles */
+@layer base {
+    body {
+        background-color: var(--color-background);
+        color: var(--color-text-primary);
+        font-family: var(--font-sans);
+        overflow-x: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: var(--font-heading);
+    }
+
+    button,
+    [role="button"],
+    .btn {
+        cursor: pointer;
+    }
+}
+
+/* Custom Utility Classes */
+@utility text-gradient {
+    background: var(--background-image-primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@utility glass-card {
+    background: rgba(26, 28, 58, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@utility bg-blurred-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(15px);
+    opacity: 0.3;
+    z-index: 0;
+}
